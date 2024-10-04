@@ -1,0 +1,35 @@
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: row;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+     flex-direction: column; 
+}
+
+
+.card img{
+
+    height: 20rem;
+    width: 20rem;
+}
+
+.card p {
+    display : flex;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.card button {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: brown;
+    color: black;
+    width: 50%;
+}
+
