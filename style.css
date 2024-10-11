@@ -1,35 +1,78 @@
-.cards{
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+}
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
-   flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+
 }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    width: 90%;
+  }
+   
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover; 
+  }
 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-     flex-direction: column; 
-}
+  .card button{
+     width: 100%;
+  }
 
-
-.card img{
-
-    height: 20rem;
-    width: 20rem;
-}
-
-.card p {
-    display : flex;
+  .model-outer{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
     justify-content: center;
-    font-size: x-large;
-    font-weight: bolder;
-}
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    pointer-events: none;
+    
+  }
 
-.card button {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: brown;
-    color: black;
-    width: 50%;
-}
+  .model-inner{
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 100px;
+  padding: 2rem;
+  border: 1px solid gray;
+  border-radius: 5%;
+  background-color: bisque;
+  }
+
+  .model-inner>p{
+     display: flex;
+     justify-content: center;
+     font-weight: bolder;
+     font-size:larger;
+  }
+
+
+  .model-outer.open{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .model-outer img {
+     width: 100%; 
+    border-radius: 4%;
+  }
 
